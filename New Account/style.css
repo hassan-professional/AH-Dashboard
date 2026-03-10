@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+body{
+    background-color: #1a1a2e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+main{
+    margin: 200px;
+    color: white;
+    background-color: #16213e;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.NewAccount h1{
+    text-align: center;
+}
+.NewAccount form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 40px;
+    align-items: stretch;
+}
+.NewAccount form label{
+    color: white;
+    font-size: 18px;
+    margin: 5px 10px;
+}
+.NewAccount form #name, #username, #email, #phone, #password, #confirmPassword{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 10px;
+    width: 90%;
+    font-size: 18px;
+}
+::placeholder{
+    font-size: 18px;
+}
+#DoB{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 5px 10px;
+    justify-content: space-between;
+}
+#DoB select{
+    display: inline-block;
+    width: 25%;
+    margin:15px 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#gender{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 5px 10px;
+    justify-content: space-between;
+}
+#gender label{
+    display: flex;
+    margin: 5px 10px;
+    justify-content: center;
+    align-items: center;
+}
+#gender input{
+    margin-left: 15px;
+}
+.policy{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px 5px;
+}
+.policy input{
+    margin: 5px 10px;
+    width: 20px;
+}
+.policy p{
+    margin: 5px 0;
+}
+.policy a{
+    color: gold;
+    text-decoration: none;
+}
+.policy a:hover{
+    text-decoration: underline;
+}
+form button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 10px;
+    width: 90%;
+    background-color: white;
+}
+form button:hover{
+    cursor: pointer;
+    background-color: #404e7e;
+    color: white;
+}
+.LoginPage{
+    text-align: center;
+    margin-top: 20px;
+}
+.LoginPage a{
+    color: gold;
+    text-decoration: none;
+}

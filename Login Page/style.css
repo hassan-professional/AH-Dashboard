@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+body{
+    background-color: #1a1a2e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color: #16213e;
+    margin: 300px;
+}
+div.logo{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.login_container{
+    padding: 15px;
+}
+.login_container h1{
+    text-align: center;
+    color: white;
+}
+.login_container form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+.login_container form label{
+    color: white;
+    font-size: 18px;
+    margin: 5px 10px;
+}
+.login_container form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 10px;
+    width: 90%;
+    font-size: 18px;
+}
+.login_container form button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 10px;
+    width: 90%;
+    background-color: white;
+}
+.login_container form button:hover{
+    cursor: pointer;
+    background-color: #404e7e;
+    color: white;
+}
+.createnewAcc{
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    padding-bottom: 70px;
+}
+.createnewAcc a{
+    color: gold;
+    text-decoration: none;
+}
+.createnewAcc a:hover{
+    text-decoration: underline;
+}

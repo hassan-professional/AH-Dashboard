@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+body{
+    background-color: #1a1a2e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+main{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: rgb(189, 186, 186);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+header ul li{
+}
+header ul a{
+    text-decoration: none;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+header ul a:hover{
+    background-color: #333;
+    color: white;
+}
+/* Main Styling */
+main{
+    background-color: #1a1a2e;
+}
+aside{
+    background-color: #16213e;
+    padding: 20px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+aside ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+aside ul li a:hover{
+    background-color: #465275;
+    color: white;
+    border-radius: 10px;
+}
+section .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px;
+    flex-direction: column;
+}
+.qoute p span{
+    color: transparent;
+    background: linear-gradient(45deg, #eb3609, #78a108, #0192f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.qoute button{
+    padding: 10px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #333;
+}
+.qoute button:hover{
+    cursor: pointer;
+    background-color: #16213e;
+    color: white;
+    font-weight: bold;
+}
+.task{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.activeTask, .goalCompleted, .upcomingEvents{
+    color: white;
+    background-color: #16213e;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px;
+    width: 80%;
+    font-size: 14px;
+}
+.activeDash{
+    background-color: #333;
+    color: white;
+}
+.Analytics{
+    margin: 20px;
+}
+.Analytics select{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #16213e;
+    color: white;
+}
