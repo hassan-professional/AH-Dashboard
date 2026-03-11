@@ -1,3 +1,7 @@
+:root {
+  --o-colorStyling: linear-gradient(45deg, #e90a0a, #b4e409, #09b4e4, #9409e4, #f00a62);;
+  --pane-padding: 5px 42px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -12,7 +16,7 @@ body{
 main{
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 1fr;
+    grid-template-areas: "aside sections";
 }
 header{
     display: flex;
@@ -50,6 +54,7 @@ main{
 aside{
     background-color: #16213e;
     padding: 20px;
+    grid-area: aside;
 }
 aside ul{
     list-style: none;
@@ -63,67 +68,92 @@ aside ul li a{
     text-decoration: none;
     color: white;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 aside ul li a:hover{
     background-color: #465275;
     color: white;
     border-radius: 10px;
 }
-section .head{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: 20px;
-    flex-direction: column;
+.sections{
+    padding: 20px;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "header"
+                         "Stats"
+                         "Products"
+                         "ProductsCards";
+    grid-area: sections;
 }
-.qoute p span{
-    color: transparent;
-    background: linear-gradient(45deg, #eb3609, #78a108, #0192f3);
-    -webkit-background-clip: text;
+.header h1{
+    background: var(--o-colorStyling);
     background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.qoute button{
-    padding: 10px 30px;
+.qoute{
+    font-size: 20px;
+    background: var(--o-colorStyling);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header button{
+    padding: 10px 50px;
     margin: 10px 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
-    background-color: white;
-    color: #333;
-}
-.qoute button:hover{
-    cursor: pointer;
+    color: white;
     background-color: #16213e;
+}
+.header button:hover{
+    cursor: pointer;
+    background-color: #465275;
     color: white;
     font-weight: bold;
 }
-.task{
+.header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.statsCards{
+    grid-area: Stats;
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
 }
-.activeTask, .goalCompleted, .upcomingEvents{
-    color: white;
-    background-color: #16213e;
+.statsCards .item{
+    padding: 20px;
     border-radius: 10px;
-    padding: 25px;
-    margin: 20px;
-    width: 80%;
-    font-size: 14px;
+    border: white 1px solid;
+    cursor: pointer;
 }
-.activeDash{
-    background-color: #333;
-    color: white;
-}
-.Analytics{
-    margin: 20px;
-}
-.Analytics select{
-    padding: 10px;
+.statsCards .item1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px;
+    flex-direction: row;
+    background-color: #0ecfff;
     border-radius: 10px;
     border: none;
-    background-color: #16213e;
-    color: white;
+}
+.statsCards .item1:hover{
+    cursor: pointer;
+    background-color: #5cd9f8;
+}
+.statsCards .item1 .logo, .text{
+    background-color: transparent;
+}
+.ProductList{
+    grid-area: Products;
+}
+.ProductsCards{
+    grid-area: ProductsCards;
 }
