@@ -1,5 +1,7 @@
 
-
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 
 
 // let quote = document.querySelector(".quote");
@@ -66,18 +68,18 @@
 // // Call it when dashboard loads
 // fetchProducts();
 
-async function fetchQoutes() {
-    try{
-        let response = await fetch("https://quoteslate.vercel.app/api/tags")
-        if(!response.ok){
-            throw new Error("Network response was not ok")
-        } else{
-            let data = await response.json();
-            console.log(data)
-        }
-    }
-    catch(error){
-        console.log(error)
-    }
-}
-fetchQoutes();
+// async function fetchQoutes() {
+//     try{
+//         let response = await fetch("https://quoteslate.vercel.app/api/tags")
+//         if(!response.ok){
+//             throw new Error("Network response was not ok")
+//         } else{
+//             let data = await response.json();
+//             console.log(data)
+//         }
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+// fetchQoutes();
