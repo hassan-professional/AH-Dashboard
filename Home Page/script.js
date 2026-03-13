@@ -1,10 +1,53 @@
+async function getProducts() {
+  const response = await fetch("https://fakestoreapi.com/products")
+  const data = await response.json()
+  console.log(data)
+  return data
+}
 
-fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((json) => console.log(json));
+
+async function createCards() {
+    const data = await getProducts()
+        const cardbox = document.getElementsByClassName("products")[0]
+        data.forEach(item => {
+            const card = document.createElement("div")
+            card.classList.add("card")
+            card.style.display = "flex"
+            card.style.flexDirection = "column"
+            card.style.justifyContent = "space-between"
+            card.style.alignItems = "center"
+            card.style.gap = "10px"
+
+            card.innerHTML = `
+                            <img src="${item.image}" width="100px" height="100px" alt="">
+                            <h2>${item.title}</h2>
+                            <p>${item.description.trim().slice(0, 150)}...</p>
+                            <p class="price">Price: ${item.price} $</p>
+                            <div class="bottomButtons" style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px;">
+                                <button class="view">View</button>
+                                <button class="add to cart">Add</button>
+                            </div>`
+            cardbox.appendChild(card)
+        })
+}
+createCards()
+
+// const ProductLink = document.getElementsByClassName("productsLink")[0]
+// const filterBtn = document.getElementsByClassName("filter")[0]
+// filterBtn.addEventListener("click", () => {
+//     window.location.href = "../Products/index.html"
+// })
+// ProductLink.addEventListener("click", () => {
+//     window.location.href = "../Products/index.html"
+// })
 
 
-// let quote = document.querySelector(".quote");
+// fetch("https://fakestoreapi.com/products")
+//   .then((res) => res.json())
+//   .then((json) => console.log(json));
+
+
+// // let quote = document.querySelector(".quote");
 // async function getQuote(){
 //     let url = "https://api.quotable.io"
 //     try{

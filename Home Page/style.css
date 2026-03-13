@@ -40,6 +40,18 @@ header ul a:hover{
     background-color: #333;
     color: white;
 }
+header input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header input:hover{
+    outline: none;
+    background-color: rgb(240, 229, 209);
+}
 /* Main Styling */
 main{
     display: grid;
@@ -257,23 +269,27 @@ section > p{
 }
 .ProductsCards{
     grid-area: ProductsCards;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 10px;
+}
+.ProductsCards .filterBtn{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+.ProductsCards .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 .ProductsCards .card{
     border: white solid 1px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
-.ProductsCards .card .topButtons{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-.ProductsCards .card .topButtons .filter{
+
+.ProductsCards .filterBtn .filter{
     padding: 5px 10px;
     margin-bottom: 20px;
     border: none;
