@@ -120,12 +120,16 @@ aside button:hover{
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+.cards{
+    display: flex;
+}
 .products .card{
     display: flex;
     background-color: white;
-    justify-content: center;
-    align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 25%;
 }
 .card button{
     padding: 10px 20px;

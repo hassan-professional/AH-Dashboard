@@ -18,7 +18,7 @@ async function createCards() {
             card.innerHTML = `<p>A.Hassan Est. 2024 • Brand  & Design</p>
             <img src="${item.image}" width="90%" style="justify-self: center;" alt="">
             <p class="price">Price: ${item.price} $</p>
-            <p class="description">${item.description.trim().slice(0, 150)}...</p>
+            <p class="description">${item.description.trim().slice(0, 100)}...</p>
             <button class="add_to_cart">Add to Cart</button>`
             cardbox.appendChild(card)
         })
