@@ -267,6 +267,14 @@ section > p{
 .ProductList .list ul li{
     margin: 10px;
 }
+.ProductList .list ul li a{
+    text-decoration: none;
+    color: aqua;
+}
+.ProductList .list ul li a:hover{
+    cursor: pointer;
+    color: white;
+}
 .ProductsCards{
     grid-area: ProductsCards;
     margin-top: 50px;

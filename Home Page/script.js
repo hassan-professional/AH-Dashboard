@@ -9,6 +9,7 @@ async function getProducts() {
 async function createCards() {
     const data = await getProducts()
         const cardbox = document.getElementsByClassName("products")[0]
+        const list = document.querySelector(".list ul")
         data.forEach(item => {
             const card = document.createElement("div")
             card.classList.add("card")
@@ -28,9 +29,46 @@ async function createCards() {
                                 <button class="add to cart">Add</button>
                             </div>`
             cardbox.appendChild(card)
+
         })
 }
 createCards()
+async function createList() {
+    const data = await getProducts()
+    const list = document.querySelector(".list ul")
+    data.forEach(item => {
+        const li = document.createElement("li")
+        li.classList.add("listItem")
+        li.innerHTML = `<a href="">${item.title}</a>`
+        list.appendChild(li)
+    })
+}
+createList()
+
+const ProductBtn = document.getElementsByClassName("productsLink")[0]
+ProductBtn.addEventListener("click", () => {
+    window.location.href = "../Products/index.html"
+})
+
+const OrderBtn = document.getElementsByClassName("ordersLink")[0]
+OrderBtn.addEventListener("click", () => {
+    window.location.href = "../Orders/index.html"
+})
+
+const CustomerBtn = document.getElementsByClassName("customersLink")[0]
+CustomerBtn.addEventListener("click", () => {
+    window.location.href = "../Customers/index.html"
+})
+
+const SettingBtn = document.getElementsByClassName("settingsLink")[0]
+SettingBtn.addEventListener("click", () => {
+    window.location.href = "../Settings/index.html"
+})
+
+const ProfileBtn = document.getElementsByClassName("profileLink")[0]
+ProfileBtn.addEventListener("click", () => {
+    window.location.href = "../Profile/index.html"
+})
 
 // const ProductLink = document.getElementsByClassName("productsLink")[0]
 // const filterBtn = document.getElementsByClassName("filter")[0]
